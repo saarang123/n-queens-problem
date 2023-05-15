@@ -32,17 +32,12 @@ def fitness(state):
 	return max_fit - cnt
 
 def random_next(state):
-	if random.random() < 1:
-		while True:
-			i = random.randint(0, n - 1)
-			j = random.randint(0, n - 1)
-			if i != j:
-				break
-		state[i], state[j] = state[j], state[i]
-	else:
+	while True:
 		i = random.randint(0, n - 1)
-		row = random.randint(0, n - 1)
-		state[i] = row
+		j = random.randint(0, n - 1)
+		if i != j:
+			break
+	state[i], state[j] = state[j], state[i]
 	return state
 
 def simulated_annealing(output = False):
