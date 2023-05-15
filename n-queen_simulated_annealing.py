@@ -87,4 +87,4 @@ def simulated_annealing(output = False):
 		print(' '.join(row))
 
 if __name__ == "__main__":
-	simulated_annealing(True)
+	simulated_annealing()
